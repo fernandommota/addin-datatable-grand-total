@@ -27,7 +27,7 @@ define([
     "colType",
     new AddIn({
       name: "datatableGrandTotal",
-      label: "Numeric BR",
+      label: "Add-In DataTable Grand Total",
       defaults: {},
       implementation: function(tgt, st, opt) {
         tableId = "#" + tgt.parentNode.parentNode.parentNode.id;
