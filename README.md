@@ -1,6 +1,6 @@
 # AddIn Datatable Grand Total
 
-AddIn created to apply format numbers and make page total and full data totals for CTools datatable component.
+AddIn created to apply a mask to numbers and make a footer with "Total" of viewed page and a full "Grand Total" for Pentaho CDF datatable component, on every search or pagination change the "Total" row will be updated.
 
 <img src="img/appliedExample.png" alt="Example of addin-datatable-grand-total" title="addIn datatableGrandTotal" align="center" />
 
