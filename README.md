@@ -29,7 +29,7 @@ define([
 ], function(AddIn, Dashboard, pvc, $) {
 
  /*
- * addIn content script without requireJS
+ * should maintain the content of this function
  */
 
 });
