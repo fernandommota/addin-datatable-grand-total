@@ -89,6 +89,8 @@ define([
 
 - In your table Component, insert the propertie "Column Types" the addin name type 'datatableGrandTotal'
 
+<img src="img/columnTypeExample.png" alt="Example of addin-datatable-grand-total" title="addIn datatableGrandTotal" align="center" />
+
 **_Custom format_**
 
 By default these addIn will apply the Brazilian money format (R$ #,##0.00).
