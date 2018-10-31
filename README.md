@@ -1,4 +1,4 @@
-# AddIn datatable Grand Total
+# AddIn Datatable Grand Total
 
 AddIn created to apply format numbers and make page total and full data totals for CTools datatable component.
 
