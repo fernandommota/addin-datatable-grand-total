@@ -8,7 +8,7 @@ AddIn created to apply format numbers and make page total and full data totals f
 
 ### Add Footer
 
-- Add the follow function on "Post Execution" property to render footer tags:
+- Add the following function on "Post Execution" property to render footer tags:
 
   ```JavaScript
   function postExecution(){
@@ -76,7 +76,7 @@ define([
 /** end addIn datatableGrandTotal **/
 ```
 
-- Replace the object _Dashboard_ to _Dashboard_ as follow:
+- Replace the object _Dashboard_ to _Dashboards_ as following:
 
 ```JavaScript
  //register addIn
@@ -92,7 +92,7 @@ define([
 **_Custom format_**
 By default these addIn will apply the Brazilian money format (R$ #,##0.00).
 
-- Case you need use another mask is possible add a function in "Pre Execution" property and apply by index column a custom function format as follow example (applied at image datatable example above):
+- Case you need use another mask is possible add a function in "Pre Execution" property and apply by index column a custom function format as following example (applied at image datatable example above):
 
 ```JavaScript
 function myPreExecutionFunction() {
