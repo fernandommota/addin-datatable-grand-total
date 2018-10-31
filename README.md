@@ -47,7 +47,7 @@ define([
 
 **_Default_**
 
-- In your table Component, insert the propertie "Column Types" the value 'datatableGrandTotal'
+- In your table Component, insert the propertie "Column Types" the addin name type 'datatableGrandTotal'
 
 **_Custom format_**
 By default these addIn will apply the Brazilian money format (R$ #,##0.00).
