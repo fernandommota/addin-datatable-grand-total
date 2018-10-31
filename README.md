@@ -90,6 +90,7 @@ define([
 - In your table Component, insert the propertie "Column Types" the addin name type 'datatableGrandTotal'
 
 **_Custom format_**
+
 By default these addIn will apply the Brazilian money format (R$ #,##0.00).
 
 - Case you need use another mask is possible add a function in "Pre Execution" property and apply by index column a custom function format as following example (applied at image datatable example above):
