@@ -19,7 +19,7 @@ define([
   });
 
   //global variable
-  var totals = {};
+  var datatableTotals = {};
 
   //register addIn
   Dashboard.registerGlobalAddIn(
@@ -33,32 +33,37 @@ define([
         tableId = "#" + tgt.parentNode.parentNode.parentNode.id;
 
         //initialize if necessary the object
-        if (isNaN(totals[st.colIdx])) totals[st.colIdx] = new Array();
+        if (isNaN(datatableTotals[st.colIdx]))
+          datatableTotals[st.colIdx] = new Array();
 
         //clear the grandTotal variable when the table is filtered
         if (tgt.parentNode.rowIndex == 1) {
-          totals[st.colIdx].total = 0;
-          totals[st.colIdx].grandTotal = 0;
+          datatableTotals[st.colIdx].total = 0;
+          datatableTotals[st.colIdx].grandTotal = 0;
           for (var i = 0; i < st.rawData.queryInfo.totalRows; i++)
-            totals[st.colIdx].grandTotal += st.rawData.resultset[i][st.colIdx];
+            datatableTotals[st.colIdx].grandTotal +=
+              st.rawData.resultset[i][st.colIdx];
 
           if (opt.formatFunction)
             formattedGrandTotal = opt.formatFunction(
-              totals[st.colIdx].grandTotal
+              datatableTotals[st.colIdx].grandTotal
             );
           else
             formattedGrandTotal = defaultFormatFunction(
-              totals[st.colIdx].grandTotal
+              datatableTotals[st.colIdx].grandTotal
             );
           $(tableId + " tfoot tr:last td")
             .eq(st.colIdx)
             .html(`<span class="pull-right">${formattedGrandTotal}</span>`);
         }
 
-        totals[st.colIdx].total += st.value;
+        datatableTotals[st.colIdx].total += st.value;
         if (opt.formatFunction)
-          formattedTotal = opt.formatFunction(totals[st.colIdx].total);
-        else formattedTotal = defaultFormatFunction(totals[st.colIdx].total);
+          formattedTotal = opt.formatFunction(datatableTotals[st.colIdx].total);
+        else
+          formattedTotal = defaultFormatFunction(
+            datatableTotals[st.colIdx].total
+          );
         $(tableId + " tfoot tr:first td")
           .eq(st.colIdx)
           .html(`<span class="pull-right">${formattedTotal}</span>`);
