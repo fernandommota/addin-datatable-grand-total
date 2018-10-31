@@ -53,28 +53,9 @@ AddIn created to apply a mask to numbers and make a footer with "Total" of viewe
 ### Without RequireJS Support
 
 - Insert the file datatableGrandTotal.js path as a "Javascript External File" resource.
-- Remove the RequireJS import parts of script:
+- Remove the RequireJS import parts of script and maintain the content of function:
 
-```JavaScript
-/** start addIn datatableGrandTotal
- * bovbi.com.br
- * @fernandommota Fernando Maia da Mota
- **/
-
-define([
-  "cdf/AddIn",
-  "cdf/Dashboard.Clean",
-  "cdf/lib/CCC/pvc",
-  "cdf/lib/jquery"
-], function(AddIn, Dashboard, pvc, $) {
-
- /*
- * should maintain the content of this function
- */
-
-});
-/** end addIn datatableGrandTotal **/
-```
+<img src="img/withoutRequireJsExample.png" alt="Example of script without RequireJS Support" title="without RequireJS Support" align="center" />
 
 - Replace the object _Dashboard_ to _Dashboards_ as following:
 
@@ -89,7 +70,7 @@ define([
 
 - In your table Component, insert the propertie "Column Types" the addin name type 'datatableGrandTotal'
 
-<img src="img/columnTypeExample.png" alt="Example of addin-datatable-grand-total" title="addIn datatableGrandTotal" align="center" />
+<img src="img/columnTypeExample.png" alt="Example of Column Types" title="Column Type datatableGrandTotal" align="center" />
 
 **_Custom format_**
 
