@@ -8,7 +8,7 @@ AddIn created to apply format numbers and make page total and full data totals f
 
 ### Add Footer
 
-- Add the follow function on "Post Execution" property to render footer tags.
+- Add the follow function on "Post Execution" property to render footer tags:
 
   ```JavaScript
   function postExecution(){
