@@ -42,3 +42,44 @@ define([
  //register addIn
   Dashboards.registerGlobalAddIn(...)
 ```
+
+## Usage
+
+**_Default_**
+
+- In your table Component, insert the propertie "Column Types" the value 'datatableGrandTotal'
+
+**_Custom format_**
+By default these addIn will apply the Brazilian money format (R$ #,##0.00).
+
+- Case you need use another mask is possible add a function in "Pre Execution" property and apply by index column a custom function format as follow example (applied at image datatable example above):
+
+```JavaScript
+function myPreExecutionFunction() {
+  this.setAddInOptions('colType','datatableGrandTotal',function(state){
+    // for a specific column
+    if(state.colIdx == 3){
+        return {
+            formatFunction: pvc.data.numberFormat({
+                mask: "#,##0",
+                style: {
+                  decimal: ",",
+                  group: "."
+                }
+              })
+        };
+    }else if(state.colIdx == 4){
+        return {
+            formatFunction: pvc.data.numberFormat({
+                mask: "#,##0.00",
+                style: {
+                  decimal: ",",
+                  group: "."
+                }
+              })
+        };
+    }
+
+  });
+}
+```
